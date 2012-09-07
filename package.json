@@ -1,0 +1,43 @@
+{
+  "name": "robol",
+  "version": "0.0.0",
+  "description": "Build tool for web projects using JavaScript, CSS, CoffeeScript, LESS and other.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/filmic/Robol.git"
+  },
+  "bugs": "https://github.com/filmic/Robol/issues",
+  "keywords": [
+    "task",
+    "build",
+    "minify",
+    "javascript",
+    "css",
+    "coffeescript",
+    "less"
+  ],
+  "author": {
+    "name": "Filip Michalowski"
+  },
+  "license": "MIT",
+  "bin": {
+    "robol": "./bin/robol"
+  },
+  "dependencies": {
+    "async": "0.1.x",
+    "coffee-script": "1.3.x",
+    "colors": "0.6.x",
+    "gear": ">= 0.7.x",
+    "gear-lib": ">= 0.8.x",
+    "optimist": "0.3.x",
+    "watchr": "2.1.x",
+    "whet.extend": "0.9.x"
+  },
+  "engines": {
+    "node": ">=0.8.x"
+  }
+}
