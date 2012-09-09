@@ -1,7 +1,7 @@
 {
   "name": "robol",
-  "version": "0.1.0",
-  "description": "Build tool for web projects using JavaScript, CSS, CoffeeScript, LESS and other.",
+  "version": "0.1.1",
+  "description": "Build tool for web projects. Compile, concatenate, lint and minify JavaScript, CoffeeScript, CSS and LESS files.",
   "main": "index.js",
   "preferGlobal": true,
   "scripts": {
