@@ -34,7 +34,8 @@
   },
   "directories": {
     "lib": "./lib",
-    "bin": "./bin"
+    "bin": "./bin",
+    "example": "./examples"
   },
   "licenses": [
     {
