@@ -125,6 +125,13 @@ You can also define multiple build configurations for scripts and styles:
 ```
 
 ---
+### Updates
+Robol can be updated using following command:
+
+	npm update robol -g
+
+
+---
 ### Bundled compilers/minifiers/linters
 * CoffeeScript 1.3.3
 * LESS 1.3.0
