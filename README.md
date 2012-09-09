@@ -130,4 +130,4 @@ You can also define multiple build configurations for scripts and styles:
 * LESS 1.3.0
 * UglifyJS 1.3.3
 * JSLint 0.1.9
-* 
+* CSSLint 0.9.8
