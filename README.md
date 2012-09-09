@@ -36,7 +36,7 @@ From the root of your project run command in console:
 ##### Options
 
 	-c, --config   Path to the config file. [default: "./robol.config.json"]
-	-w, --watch    Enables watch mode.            
+	-w, --watch    Enables watch mode. Changes to the source files trigger automatically build. 
 	-v, --version  Displays version of the module.
 	-h, --help     Displays help message.
   	
