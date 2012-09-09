@@ -8,20 +8,23 @@ Robol uses [Gear.js](http://gearjs.org/) build system.
 ---
 ### Requirements
 
-[Node.js](http://nodejs.org) and [Git](http://git-scm.com) installed.
+[Node.js](http://nodejs.org) installed.
 
-Currently confirmed working on MacOS X only.
+Modul confirmed working on MacOS X 10.8 and Windows 8.
   
 ---
 ### Instalation
+Install using npm with 'global' flag:
 
-Clone this project on github:
+	npm install robol -g
+
+Or clone this project from github:
 
 	git clone https://github.com/filmic/Robol.git
 	
-From the checked out repository folder run command in console to install Robol as a *Node.js* module:
+and from the checked out repository folder run command in console:
 
-	sudo npm install . -g
+	npm install . -g
 	
 ---
 ### Usage
@@ -120,3 +123,11 @@ You can also define multiple build configurations for scripts and styles:
   ]
 }
 ```
+
+---
+### Bundled compilers/minifiers/linters
+* CoffeeScript 1.3.3
+* LESS 1.3.0
+* UglifyJS 1.3.3
+* JSLint 0.1.9
+* 

@@ -52,6 +52,16 @@
     "watchr": "2.1.x",
     "whet.extend": "0.9.x"
   },
+  "bundleDependencies": [
+    "async",
+    "coffee-script",
+    "colors",
+    "gear",
+    "gear-lib",
+    "optimist",
+    "watchr",
+    "whet.extend"
+  ],
   "engines": {
     "node": ">=0.4.x"
   }
