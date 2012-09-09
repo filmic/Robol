@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "input_dir": "src/scripts",
+    "input_files": [
+      "js/TweenLite.js",
+      "js/plugins/CSSPlugin.js",
+      "coffee/main.coffee"
+    ],
+    "output_dir": "deploy/scripts",
+    "output_file": "scripts.min.js",
+    "minify": true,
+    "lint": true
+  },
+  "styles": {
+    "input_dir": "src/styles",
+    "input_files": [
+      "css/normalize.css",
+      "less/main.less"
+    ],
+    "output_dir": "deploy/styles",
+    "output_file": "styles.min.css",
+    "minify": true,
+    "lint": true
+  }
+}
