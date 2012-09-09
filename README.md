@@ -5,14 +5,14 @@ It allows to compile, concatenate, lint and minify JavaScript, CoffeeScript, CSS
 
 Robol uses [Gear.js](http://gearjs.org/) build system.
 
-===
+---
 ### Requirements
 
 [Node.js](http://nodejs.org) and [Git](http://git-scm.com) installed.
 
 Currently confirmed working on MacOS X only.
   
-===
+---
 ### Instalation
 
 Clone this project on github:
@@ -23,10 +23,10 @@ From the checked out repository folder run command in console to install Robol a
 
 	sudo npm install . -g
 	
-===
+---
 ### Usage
 
-From the root of your project run command in console
+From the root of your project run command in console:
 
 	robol
 

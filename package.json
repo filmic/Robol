@@ -38,6 +38,6 @@
     "whet.extend": "0.9.x"
   },
   "engines": {
-    "node": ">=0.8.x"
+    "node": ">=0.4.x"
   }
 }
