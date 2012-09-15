@@ -1,9 +1,14 @@
 # Robol
 Robol is a simple tool for building projects, created as a [Node.js](http://nodejs.org) module.
 
-It allows to compile, concatenate, lint and minify JavaScript, CoffeeScript, CSS and LESS files.
+It allows to compile, concatenate, lint and minify JavaScript, CoffeeScript, CSS and LESS files, as well as copy files within the project.
 
 Robol uses [Gear.js](http://gearjs.org/) build system.
+
+
+#### Current version
+*0.2.5*
+
 
 ---
 ### Requirements
@@ -11,7 +16,7 @@ Robol uses [Gear.js](http://gearjs.org/) build system.
 [Node.js](http://nodejs.org) installed.
 
 Modul confirmed working on MacOS X 10.8 and Windows 8.
-  
+
 ---
 ### Instalation
 Install using npm with 'global' flag:
@@ -21,11 +26,11 @@ Install using npm with 'global' flag:
 Or clone this project from github:
 
 	git clone https://github.com/filmic/Robol.git
-	
+
 and from the checked out repository folder run command in console:
 
 	npm install . -g
-	
+
 ---
 ### Usage
 
@@ -36,11 +41,12 @@ From the root of your project run command in console:
 ##### Options
 
 	-c, --config   Path to the config file. [default: "./robol.config.json"]
-	-w, --watch    Enables watch mode. Changes to the source files trigger automatically build. 
+	-w, --watch    Enables watch mode. Changes to the source files trigger automatically build.
 	-v, --version  Displays version of the module.
 	-h, --help     Displays help message.
-  	
+
 Robol requires a config file with JSON data defining inputs and outputs of the building process. By default it looks for the _robol.config.json_ file but it can be overwritten by using `-c`option.
+Wild cards in the filename, eg. *.js. are accepted. 
 
 ##### Examples of the JSON config file:
 
@@ -67,11 +73,19 @@ Robol requires a config file with JSON data defining inputs and outputs of the b
     "output_file": "styles.min.css",
     "minify": true,
     "lint": true
+  },
+  "copyFiles": [{
+    "input_dir": "source",
+    "input_files": [
+      "*.html",
+      "*.shtml"
+    ],
+    "output_dir": "deploy"
   }
 }
 ```
 
-You can also define multiple build configurations for scripts and styles:
+You can also define multiple build configurations:
 
 ```json
 {
@@ -120,7 +134,22 @@ You can also define multiple build configurations for scripts and styles:
       "minify": false,
       "lint": true
     }
-  ]
+  ],
+  "copyFiles": [{
+    "input_dir": "source",
+    "input_files": [
+      "index.html",
+      "index.shtml"
+    ],
+    "output_dir": "deploy"
+  },
+  {
+    "input_dir": "source/includes",
+    "input_files": [
+      "*.html"
+    ],
+    "output_dir": "deploy/includes"
+  }]
 }
 ```
 
