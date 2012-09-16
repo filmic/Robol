@@ -59,6 +59,9 @@
     "gear",
     "gear-lib"
   ],
+  "devDependencies": {
+    "jasmine-node": "~1.1.x"
+  },
   "engines": {
     "node": ">=0.4.x"
   }
