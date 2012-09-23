@@ -1,13 +1,13 @@
 # Robol
 Robol is a simple tool for building projects, created as a [Node.js](http://nodejs.org) module.
 
-It allows to compile, concatenate, lint and minify JavaScript, CoffeeScript, CSS and LESS files, as well as copy files within the project.
+It allows to compile, concatenate, lint and minify JavaScript, CoffeeScript, CSS and LESS files, as well as copy and remove files and directories within the project.
 
 Robol uses [Gear.js](http://gearjs.org/) build system.
 
 
 #### Current version
-*0.2.5*
+*0.3.0*
 
 
 ---
@@ -46,7 +46,10 @@ From the root of your project run command in console:
 	-h, --help     Displays help message.
 
 Robol requires a config file with JSON data defining inputs and outputs of the building process. By default it looks for the _robol.config.json_ file but it can be overwritten by using `-c`option.
-Wild cards in the filename, eg. *.js. are accepted. 
+Wild cards in the filename, eg. *.js. are accepted.
+Directories are copied / removed recursively.
+
+In the watch mode any changes to the input files trigger tasks that are defined for them (building scripts, styles or copying).
 
 ##### Examples of the JSON config file:
 
@@ -74,13 +77,27 @@ Wild cards in the filename, eg. *.js. are accepted.
     "minify": true,
     "lint": true
   },
-  "copyFiles": [{
+  "copy_files": {
     "input_dir": "source",
     "input_files": [
       "*.html",
       "*.shtml"
     ],
     "output_dir": "deploy"
+  },
+  "copy_dir": {
+    "input_dir": "source/assets",
+    "output_dir": "deploy/assets"
+  },
+  "remove_files": {
+    "input_dir": "deploy/temp",
+    "input_files": [
+      "*.html",
+      "*.shtml"
+    ]
+  },
+  "remove_dir": {
+    "input_dir": "deploy/assets/images"
   }
 }
 ```
@@ -135,7 +152,7 @@ You can also define multiple build configurations:
       "lint": true
     }
   ],
-  "copyFiles": [{
+  "copy_files": [{
     "input_dir": "source",
     "input_files": [
       "index.html",
