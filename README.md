@@ -7,7 +7,7 @@ Robol uses [Gear.js](http://gearjs.org/) build system.
 
 
 #### Current version
-*0.3.0*
+*0.3.1*
 
 
 ---
