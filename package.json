@@ -1,6 +1,6 @@
 {
   "name": "robol",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Build tool for web projects. Compile, concatenate, lint and minify JavaScript, CoffeeScript, CSS and LESS files. Copy and remove files and directories recursively.",
   "main": "index.js",
   "preferGlobal": true,
@@ -25,8 +25,8 @@
     "less"
   ],
   "author": {
-    "name": "Filip Michalowski",
-    "email": "kanelbula@gmail.com",
+    "name": "Filip Michałowski",
+    "email": "me@filmic.eu",
     "url": "http://filmic.eu/"
   },
   "bin": {
