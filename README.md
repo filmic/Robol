@@ -64,7 +64,8 @@ In the watch mode any changes to the input files trigger tasks that are defined 
     "output_dir": "deploy/scripts",
     "output_file": "scripts.min.js",
     "minify": true,
-    "lint": true
+    "lint": true,
+    "lint_config": {}
   },
   "styles": {
     "input_dir": "src/css",
@@ -75,7 +76,8 @@ In the watch mode any changes to the input files trigger tasks that are defined 
     "output_dir": "deploy/styles",
     "output_file": "styles.min.css",
     "minify": true,
-    "lint": true
+    "lint": true,
+    "lint_config": {}
   },
   "copy_files": {
     "input_dir": "source",
@@ -102,6 +104,15 @@ In the watch mode any changes to the input files trigger tasks that are defined 
 }
 ```
 
+The scripts JSLint options object (`lint_config`) can be used to overwrite the default options which are set to: 
+```json
+bitwise: true, "continue": true, debug: true, eqeq: true,
+es5: true, forin: true, newcap: true, nomen: true,
+plusplus: true, regexp: true, undef: true, unparam: true,
+sloppy: true, stupid: false, sub: true, todo: true,
+vars: true, white: true, node: true
+```
+
 You can also define multiple build configurations:
 
 ```json
@@ -116,7 +127,8 @@ You can also define multiple build configurations:
       "output_dir": "deploy",
       "output_file": "tcp.js",
       "minify": false,
-      "lint": true
+      "lint": true,
+      "lint_config": {}
     },
     {
       "input_dir": "src",
@@ -126,7 +138,8 @@ You can also define multiple build configurations:
       "output_dir": "deploy/scripts",
       "output_file": "scripts.min.js",
       "minify": true,
-      "lint": true
+      "lint": true,
+      "lint_config": {}
     }
   ],
   "styles": [
@@ -139,7 +152,8 @@ You can also define multiple build configurations:
       "output_dir": "deploy/styles",
       "output_file": "styles.min.css",
       "minify": true,
-      "lint": true
+      "lint": true,
+      "lint_config": {}
     },
     {
       "input_dir": "src/less",
@@ -149,7 +163,8 @@ You can also define multiple build configurations:
       "output_dir": "deploy/styles",
       "output_file": "test.css",
       "minify": false,
-      "lint": true
+      "lint": true,
+      "lint_config": {}
     }
   ],
   "copy_files": [{
