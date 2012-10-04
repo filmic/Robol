@@ -104,7 +104,8 @@ In the watch mode any changes to the input files trigger tasks that are defined 
 }
 ```
 
-The scripts JSLint options object (`lint_config`) can be used to overwrite the default options which are set to: 
+The scripts JSLint options object (`lint_config`) can be used to overwrite the default options which are set to:
+
 ```json
 { "bitwise": true, "continue": true, "debug": true, "eqeq": true,
 "es5": true, "forin": true, "newcap": true, "nomen": true,
