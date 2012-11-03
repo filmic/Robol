@@ -203,7 +203,7 @@ Robol can be updated using following command:
 ---
 ### Bundled compilers/minifiers/linters
 * CoffeeScript 1.3.3
-* LESS 1.3.0
+* LESS 1.3.1
 * UglifyJS 1.3.3
 * JSLint 0.1.9
 * CSSLint 0.9.8
