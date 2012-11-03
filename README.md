@@ -7,7 +7,14 @@ Robol uses [Gear.js](http://gearjs.org/) build system.
 
 
 #### Current version
-*0.3.2*
+*0.3.3*
+
+
+---
+#### Changelog
+*0.3.3*
+- Updated bundled LESS compiler to ver. 1.3.1
+- Unit tests for LESS compile task
 
 
 ---
