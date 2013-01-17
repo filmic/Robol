@@ -12,6 +12,9 @@ Robol uses [Gear.js](http://gearjs.org/) build system.
 
 ---
 #### Changelog
+*0.3.4*
+- Support for passing options to jsminify task (UglifyJS)
+
 *0.3.3*
 - Updated bundled LESS compiler to ver. 1.3.1
 - Unit tests for LESS compile task
@@ -58,6 +61,8 @@ Directories are copied / removed recursively.
 
 In the watch mode any changes to the input files trigger tasks that are defined for them (building scripts, styles or copying).
 
+For more information about UglifyJS options that can be defined in the config file ("scripts.minify_config"), see the [UglifyJS 1.x documentation](https://github.com/mishoo/UglifyJS#api).
+
 ##### Examples of the JSON config file:
 
 ```json
@@ -71,6 +76,16 @@ In the watch mode any changes to the input files trigger tasks that are defined 
     "output_dir": "deploy/scripts",
     "output_file": "scripts.min.js",
     "minify": true,
+    "minify_config": {
+      "strict_semicolons": false,
+      "mangle": false,
+      "toplevel": false,
+      "except": [],
+      "defines": {}, 
+      "squeeze": false, 
+      "make_seqs": true,
+      "dead_code": true
+    },
     "lint": true,
     "lint_config": {}
   },
@@ -111,7 +126,7 @@ In the watch mode any changes to the input files trigger tasks that are defined 
 }
 ```
 
-The scripts JSLint options object (`lint_config`) can be used to overwrite the default options which are set to:
+The scripts JSLint options object (`lint_config`) can be used to overwrite the default values which are set to:
 
 ```json
 { "bitwise": true, "continue": true, "debug": true, "eqeq": true,
@@ -119,6 +134,21 @@ The scripts JSLint options object (`lint_config`) can be used to overwrite the d
 "plusplus": true, "regexp": true, "undef": true, "unparam": true,
 "sloppy": true, "stupid": false, "sub": true, "todo": true,
 "vars": true, "white": true, "browser": true }
+```
+
+The scripts minification options object (`minify_config`) can be used to overwrite the default values which are set to:
+
+```json
+"minify_config": {
+  "strict_semicolons": false, // the parser will throw an error when it expects a semicolon and it doesn’t find it
+  "mangle": false, // mangles (compresses) variables and function names
+  "toplevel": false, // mangle toplevel names
+  "except": [], // an array of names to exclude from compression"
+  "defines": {}, // an object with properties named after symbols to replace
+  "squeeze": false, // employs further optimizations designed to reduce the size of the code
+  "make_seqs": true, // makes consecutive statements in a block to be merged using the “sequence” (comma) operator
+  "dead_code": true // removes unreachable code
+}
 ```
 
 You can also define multiple build configurations:
