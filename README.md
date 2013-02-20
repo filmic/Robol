@@ -7,11 +7,15 @@ Robol uses [Gear.js](http://gearjs.org/) build system.
 
 
 #### Current version
-*0.3.4*
+*0.3.5*
 
 
 ---
 #### Changelog
+*0.3.5*
+- New copy & rename single file task ('copy_file')
+- CoffeeScript compiler updated to ver. 1.4.0
+
 *0.3.4*
 - Support for passing options to jsminify task (UglifyJS)
 
@@ -122,6 +126,10 @@ For more information about UglifyJS options that can be defined in the config fi
   },
   "remove_dir": {
     "input_dir": "deploy/assets/images"
+  },
+  "copy_file": {
+    "input_file": "src/js/aaa.js",
+    "output_file": "deploy/js/bbb.js"
   }
 }
 ```
@@ -232,7 +240,7 @@ Robol can be updated using following command:
 
 ---
 ### Bundled compilers/minifiers/linters
-* CoffeeScript 1.3.3
+* CoffeeScript 1.4.0
 * LESS 1.3.1
 * UglifyJS 1.3.3
 * JSLint 0.1.9
