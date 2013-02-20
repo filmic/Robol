@@ -1,6 +1,6 @@
 {
   "name": "robol",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Build tool for web projects. Compile, concatenate, lint and minify JavaScript, CoffeeScript, CSS and LESS files. Copy and remove files and directories recursively.",
   "main": "index.js",
   "preferGlobal": true,
@@ -45,7 +45,7 @@
   ],
   "dependencies": {
     "async": "0.1.x",
-    "coffee-script": "1.3.3",
+    "coffee-script": "1.4.0",
     "colors": "0.6.x",
     "gear": ">= 0.7.x",
     "gear-lib": ">= 0.8.x",
