@@ -10,7 +10,7 @@ files =
   output: 'test/files/output/test1.js'
 
 remove = (filename) ->
-    if (fs.existsSync filename)
+    if fs.existsSync filename
       fs.unlinkSync filename
 
 describe 'Copy task', ->
@@ -19,7 +19,7 @@ describe 'Copy task', ->
     Test copy file
   ###
   it 'should copy & rename file', (done) ->
-
+    remove files.output
     copyFile files, {}, (error, response) ->
       i = fs.readFileSync files.input, 'utf8'
       o = fs.readFileSync files.output, 'utf8'
