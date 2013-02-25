@@ -7,11 +7,15 @@ Robol uses [Gear.js](http://gearjs.org/) build system.
 
 
 #### Current version
-*0.3.5*
+*0.3.6*
 
 
 ---
 #### Changelog
+*0.3.6*
+- Option to enable styles compression with YUICompress
+- Safe concatenation of JS files with blank lines between them
+
 *0.3.5*
 - New copy & rename single file task ('copy_file')
 - CoffeeScript compiler updated to ver. 1.4.0
@@ -29,7 +33,7 @@ Robol uses [Gear.js](http://gearjs.org/) build system.
 
 [Node.js](http://nodejs.org) installed.
 
-Modul confirmed working on MacOS X 10.8 and Windows 8.
+Module confirmed working on MacOS X 10.8 and Windows 8.
 
 ---
 ### Instalation
@@ -67,6 +71,8 @@ In the watch mode any changes to the input files trigger tasks that are defined 
 
 For more information about UglifyJS options that can be defined in the config file ("scripts.minify_config"), see the [UglifyJS 1.x documentation](https://github.com/mishoo/UglifyJS#api).
 
+The styles can be minified and compressed (YUICompress) by setting flags "styles.minify" and "styles.minify_config.yuicompress" to true.
+
 ##### Examples of the JSON config file:
 
 ```json
@@ -102,6 +108,9 @@ For more information about UglifyJS options that can be defined in the config fi
     "output_dir": "deploy/styles",
     "output_file": "styles.min.css",
     "minify": true,
+    "minify_config": {
+      "yuicompress": true
+    },
     "lint": true,
     "lint_config": {}
   },
@@ -198,6 +207,9 @@ You can also define multiple build configurations:
       "output_dir": "deploy/styles",
       "output_file": "styles.min.css",
       "minify": true,
+      "minify_config": {
+        "yuicompress": true
+      },
       "lint": true,
       "lint_config": {}
     },
@@ -209,6 +221,9 @@ You can also define multiple build configurations:
       "output_dir": "deploy/styles",
       "output_file": "test.css",
       "minify": false,
+      "minify_config": {
+        "yuicompress": false
+      },
       "lint": true,
       "lint_config": {}
     }
